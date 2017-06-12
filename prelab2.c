@@ -69,22 +69,27 @@ void divide_numbers(struct data* input, int size)
     printf("%d / %d = %.2f\n",input[i].x, input[i].y, dif);
   }
 }
-
+void swap(int* x, int* y)
+{
+  int temp = *x;
+  *x = *y;
+  *y = temp;
+}
 struct data* sort(struct data* input, int size)
 {
   int i, key, j;
-  for(i=1; i < size; i++) //TEST LOOK TESTINGGGGGGGGGGGGGGGGGGGGGGGGGGGG
+  for(i=0; i < size -1; i++) //TEST LOOK TESTINGGGGGGGGGGGGGGGGGGGGGGGGGGGG
   {
-      key = input[i].x; // 0
-      j = i - 1; // 2
-      while(j >= 0 && input[j].x > key)
+    key = i;
+    for(j = i+1; j < size; j++)
+    {
+      if(input[j].x < input[key].x)
       {
-        input[j+1] = input[j];
-
-        j = j-1;
+        key = j;
       }
-
-      input[j+1].x = key;
+    }
+    swap(&input[key].x, &input[i].x);
+    swap(&input[key].y, &input[i].y);
   }
 
   return input;
