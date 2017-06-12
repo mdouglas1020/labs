@@ -73,7 +73,7 @@ void divide_numbers(struct data* input, int size)
 struct data* sort(struct data* input, int size)
 {
   int i, key, j;
-  for(i=1; i < size; i++) //TEST LOOK
+  for(i=1; i < size; i++) //TEST LOOK TESTINGGGGGGGGGGGGGGGGGGGGGGGGGGGG
   {
       key = input[i].x; // 0
       j = i - 1; // 2
