@@ -46,7 +46,7 @@ int main(int argc, char* argv[])
     printf("%d %d\n",sorted[i].x, sorted[i].y);
   }
 
-
+  free(sorted);
   return 0;
 }
 
@@ -78,7 +78,7 @@ void swap(int* x, int* y)
 struct data* sort(struct data* input, int size)
 {
   int i, key, j;
-  for(i=0; i < size -1; i++) //TEST LOOK TESTINGGGGGGGGGGGGGGGGGGGGGGGGGGGG
+  for(i=0; i < size -1; i++)
   {
     key = i;
     for(j = i+1; j < size; j++)
