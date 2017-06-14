@@ -20,7 +20,7 @@ int main(int argc, char* argv[])
   }
 
   int i;
-  int size = atoi(argv[1]);
+  int size = atoi(argv[2], argv[1]);
 
   struct data* input = read_data(size);
 
